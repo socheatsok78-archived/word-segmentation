@@ -3,7 +3,12 @@
   "env": {
     "node": true
   },
-  "extends": ["plugin:vue/recommended", "eslint:recommended", "prettier"],
+  "extends": [
+    "plugin:vue/recommended",
+    "eslint:recommended",
+    "prettier",
+    "eslint-config-airbnb-base"
+  ],
   "rules": {
     "no-empty": "error",
     "no-alert": "warn",
@@ -27,25 +32,26 @@
     ],
     "object-curly-spacing": ["error", "always"],
     "array-bracket-spacing": ["error", "always"],
+    "padding-line-between-statements": [
+      "warn",
+      {
+        "blankLine": "always",
+        "prev": ["const", "let", "var"],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      }
+    ],
+    "import/no-unresolved": ["error", { "ignore": ["^@/"] }],
     "import/newline-after-import": [
       "error",
       {
         "count": 1
       }
-    ],
-    "padding-line-between-statements": [
-      "warn",
-      {
-        "blankLine": "always",
-        "prev": [ "const", "let", "var" ],
-        "next": "*"
-      },
-      {
-        "blankLine": "any",
-        "prev": [ "const", "let", "var" ],
-        "next": [ "const", "let", "var" ]
-      }
-    ],
+    ]
   },
   "overrides": [
     {
@@ -58,5 +64,5 @@
   "plugins": ["prettier", "import"],
   "parserOptions": {
     "parser": "babel-eslint"
-  }∫
+  }
 }
