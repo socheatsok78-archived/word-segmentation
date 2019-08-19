@@ -1,6 +1,6 @@
 import '@/bootstrap';
 
-import Vue from 'vue';
+import Vue, { VueConstructor } from 'vue';
 import VueRouter from 'vue-router';
 
 // Vue Plugins
@@ -18,10 +18,18 @@ Vue.use(VueRouter);
 // Customer Plugins
 Vue.use(SegmentorPlugin);
 
-// Initialize Vue
-const app = new Vue({
+/**
+ * Vue Constructor
+ * @type {VueConstructor}
+ */
+const vueConstructor = {
+  mounted() {
+    console.log('vueConstructor');
+  },
   render: h => h(App),
-}).$mount('#app');
+};
 
+// Initialize Vue
+const app = new Vue(vueConstructor).$mount('#app');
 
 window.$app = app;
