@@ -45,6 +45,7 @@
         "next": ["const", "let", "var"]
       }
     ],
+    "arrow-parens": ["error", "as-needed"],
     "import/no-unresolved": ["error", { "ignore": ["^@/"] }],
     "import/newline-after-import": [
       "error",
