@@ -1,10 +1,9 @@
 {
-  "extends": ["prettier", "plugin:vue/essential"],
-  "parserOptions": {
-    "parser": "babel-eslint",
-    "ecmaVersion": 2017,
-    "sourceType": "module"
+  "root": true,
+  "env": {
+    "node": true
   },
+  "extends": ["plugin:vue/essential", "eslint:recommended", "prettier"],
   "rules": {
     "no-empty": "error",
     "no-alert": "warn",
@@ -38,15 +37,15 @@
       {
         "props": true,
         "ignorePropertyModificationsFor": [
-          "acc", // for reduce accumulators
-          "accumulator", // for reduce accumulators
-          "e", // for e.returnvalue
-          "ctx", // for Koa routing
-          "req", // for Express requests
-          "request", // for Express requests
-          "res", // for Express responses
-          "response", // for Express responses
-          "$scope" // for Angular 1 scopes
+          "acc",
+          "accumulator",
+          "e",
+          "ctx",
+          "req",
+          "request",
+          "res",
+          "response",
+          "$scope"
         ]
       }
     ],
@@ -99,5 +98,8 @@
       }
     }
   ],
-  "plugins": ["prettier", "import"]
+  "plugins": ["prettier", "import"],
+  "parserOptions": {
+    "parser": "babel-eslint"
+  }
 }
