@@ -1,12 +1,16 @@
 {
-  "extends": ["plugin:vue/essential"],
+  "extends": ["prettier", "plugin:vue/essential"],
   "parserOptions": {
     "parser": "babel-eslint",
     "ecmaVersion": 2017,
     "sourceType": "module"
   },
   "rules": {
+    "no-empty": "error",
+    "no-alert": "warn",
     "no-console": "warn",
+    "no-eval": "error",
+    "no-debugger": "warn",
     "semi": ["error", "always"],
     "quotes": [
       "error",
@@ -16,6 +20,56 @@
         "allowTemplateLiterals": true
       }
     ],
+    "no-multi-spaces": [
+      "error",
+      {
+        "ignoreEOLComments": false
+      }
+    ],
+    "no-shadow": [
+      2,
+      {
+        "hoist": "all",
+        "allow": ["resolve", "reject", "done", "next", "err", "error"]
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "acc", // for reduce accumulators
+          "accumulator", // for reduce accumulators
+          "e", // for e.returnvalue
+          "ctx", // for Koa routing
+          "req", // for Express requests
+          "request", // for Express requests
+          "res", // for Express responses
+          "response", // for Express responses
+          "$scope" // for Angular 1 scopes
+        ]
+      }
+    ],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all"
+      }
+    ],
+    "padding-line-between-statements": [
+      "warn",
+      {
+        "blankLine": "always",
+        "prev": ["const", "let", "var"],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      }
+    ],
+    "no-return-assign": ["error", "except-parens"],
     "no-unused-vars": [
       "error",
       {
@@ -24,7 +78,18 @@
         "ignoreRestSiblings": false
       }
     ],
-    "no-empty": "error"
+    "no-unused-expressions": [
+      2,
+      {
+        "allowTaggedTemplates": true
+      }
+    ],
+    "import/newline-after-import": [
+      "error",
+      {
+        "count": 1
+      }
+    ]
   },
   "overrides": [
     {
@@ -34,5 +99,5 @@
       }
     }
   ],
-  "plugins": ["prettier"]
+  "plugins": ["prettier", "import"]
 }
