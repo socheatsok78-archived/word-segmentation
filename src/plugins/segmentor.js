@@ -8,13 +8,13 @@ import SegmentorWorker from '@/workers/segmentor.worker';
 
 class SegmentorPlugin {
   /**
-    * 
+    *
     * @param {VueConstructor} Vue
     */
   static install(Vue) {
-    const Segmentor = Comlink.wrap(new SegmentorWorker);
+    const Segmentor = Comlink.wrap(new SegmentorWorker());
 
-    Vue.prototype.segmentor = new Segmentor;
+    Vue.prototype.segmentor = new Segmentor();
   }
 }
 

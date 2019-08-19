@@ -14,8 +14,8 @@ import HelloWorld from './components/HelloWorld.vue';
 export default {
   name: 'WordSegmentation',
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+  },
 };
 </script>
 

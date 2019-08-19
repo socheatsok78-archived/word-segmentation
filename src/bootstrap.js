@@ -7,6 +7,7 @@ try {
 
   window.Popper = Popper;
 
+  // eslint-disable-next-line
   require('bootstrap');
 } catch (error) {
   //
