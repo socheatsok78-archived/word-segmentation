@@ -3,8 +3,9 @@
   "env": {
     "node": true
   },
-  "extends": ["plugin:vue/essential", "eslint:recommended", "prettier"],
+  "extends": ["plugin:vue/recommended", "eslint:recommended", "prettier"],
   "rules": {
+    "max-len": ["error", { "code": 80 }],
     "no-empty": "error",
     "no-alert": "warn",
     "no-console": "warn",
@@ -19,70 +20,14 @@
         "allowTemplateLiterals": true
       }
     ],
-    "no-multi-spaces": [
-      "error",
-      {
-        "ignoreEOLComments": false
-      }
-    ],
-    "no-shadow": [
-      2,
-      {
-        "hoist": "all",
-        "allow": ["resolve", "reject", "done", "next", "err", "error"]
-      }
-    ],
-    "no-param-reassign": [
-      "error",
-      {
-        "props": true,
-        "ignorePropertyModificationsFor": [
-          "acc",
-          "accumulator",
-          "e",
-          "ctx",
-          "req",
-          "request",
-          "res",
-          "response",
-          "$scope"
-        ]
-      }
-    ],
     "prefer-const": [
       "error",
       {
         "destructuring": "all"
       }
     ],
-    "padding-line-between-statements": [
-      "warn",
-      {
-        "blankLine": "always",
-        "prev": ["const", "let", "var"],
-        "next": "*"
-      },
-      {
-        "blankLine": "any",
-        "prev": ["const", "let", "var"],
-        "next": ["const", "let", "var"]
-      }
-    ],
-    "no-return-assign": ["error", "except-parens"],
-    "no-unused-vars": [
-      "error",
-      {
-        "vars": "all",
-        "args": "after-used",
-        "ignoreRestSiblings": false
-      }
-    ],
-    "no-unused-expressions": [
-      2,
-      {
-        "allowTaggedTemplates": true
-      }
-    ],
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "always"],
     "import/newline-after-import": [
       "error",
       {
