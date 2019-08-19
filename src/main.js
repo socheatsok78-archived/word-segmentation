@@ -1,7 +1,10 @@
 import Vue from 'vue'
-import App from '@/App.vue'
 
+// Vue Plugins
 import SegmentorPlugin from "@/plugins/segmentor";
+
+// Components
+import App from '@/App.vue'
 
 // Vue Config
 Vue.config.productionTip = false
