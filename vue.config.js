@@ -1,12 +1,17 @@
 module.exports =  {
-    configureWebpack: {
-        module: {
-            rules: [
-                {
-                    test: /\.worker\.js$/,
-                    use: { loader: 'worker-loader' }
-                }
-            ]
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.worker\.js$/,
+          use: {
+            loader: 'worker-loader',
+            options: {
+              name: 'worker/[hash].worker.js',
+            }
+          }
         }
+      ]
     }
-}
+  }
+};
