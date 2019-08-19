@@ -1,14 +1,14 @@
-import Vue from 'vue'
+import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 // Vue Plugins
-import SegmentorPlugin from "@/plugins/segmentor";
+import SegmentorPlugin from '@/plugins/segmentor';
 
 // Components
-import App from '@/App.vue'
+import App from '@/App.vue';
 
 // Vue Config
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 // Register Plugin
 Vue.use(VueRouter);
@@ -17,6 +17,9 @@ Vue.use(VueRouter);
 Vue.use(SegmentorPlugin);
 
 // Initialize Vue
-window.$app = new Vue({
+const app = new Vue({
   render: h => h(App),
 }).$mount('#app');
+
+
+window.$app = app;
