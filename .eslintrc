@@ -45,7 +45,28 @@
         "next": ["const", "let", "var"]
       }
     ],
+    "no-restricted-syntax": [
+      2,
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "no-unused-vars": [
+      1,
+      {
+        "ignoreSiblings": true,
+        "argsIgnorePattern": "res|next|^err"
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
     "arrow-parens": ["error", "as-needed"],
+    "arrow-body-style": ["error", "as-needed"],
+    "import/prefer-default-export": "warn",
     "import/no-unresolved": ["error", { "ignore": ["^@/"] }],
     "import/newline-after-import": [
       "error",
