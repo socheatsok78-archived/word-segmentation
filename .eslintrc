@@ -1,0 +1,29 @@
+{
+  "extends": ["plugin:vue/essential"],
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "warn",
+    "semi": ["error", "always"],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.worker.js"],
+      "globals": {
+        "importScripts": true
+      }
+    }
+  ],
+  "plugins": ["prettier"]
+}
