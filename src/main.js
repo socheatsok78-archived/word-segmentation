@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueRouter from 'vue-router';
 
 // Vue Plugins
 import SegmentorPlugin from "@/plugins/segmentor";
@@ -10,6 +11,9 @@ import App from '@/App.vue'
 Vue.config.productionTip = false
 
 // Register Plugin
+Vue.use(VueRouter);
+
+// Customer Plugins
 Vue.use(SegmentorPlugin);
 
 // Initialize Vue
