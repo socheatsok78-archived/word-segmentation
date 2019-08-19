@@ -1,4 +1,4 @@
-module.exports =  {
+module.exports = {
   configureWebpack: {
     module: {
       rules: [
@@ -8,10 +8,10 @@ module.exports =  {
             loader: 'worker-loader',
             options: {
               name: 'worker/[hash].worker.js',
-            }
-          }
-        }
-      ]
-    }
-  }
+            },
+          },
+        },
+      ],
+    },
+  },
 };
